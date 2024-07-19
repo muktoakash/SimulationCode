@@ -39,3 +39,11 @@ def CMRG(n, seed):
     res = z / (m1 + 1)
     res[z == 0] = m1 / (m1 + 1) # inspect this line of code closely
     res[1:n] ## omit the seed
+
+if __name__ == '__main__':
+    ## Our own implementation for seed 1:6
+    seed = range(6) ## also checked sample(0:1e6, size = 6) for some runs
+    n = 1e5
+    U = CMRG(n, seed = seed) ## in particular, .Random.seed exists after this call
+
+    
